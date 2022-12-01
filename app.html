@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" href="app.css" />
+
+        <title>JS Calculator Demo</title>
+    </head>
+    <body>
+        <div class="app-container">
+            <div class="mainframe">
+                <div class="status-bar">JS Calculator Demo</div>
+                <div class="display-group">
+                    <div class="buffer-container">
+                        <div class="operator-buffer">None</div>
+                        <div class="value-buffer">0</div>
+                    </div>
+                    <div class="display">0</div>
+                </div>
+                <div class="button-container">
+                    <div class="button-row">
+                        <button class="function-button" id="btn_ac">AC</button>
+                        <button class="function-button" id="btn_c">C</button>
+                        <button class="function-button" id="btn_m">M</button>
+                        <button class="function-button" id="btn_mr">MR</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="function-button" id="btn_ex2">^2</button>
+                        <button class="function-button" id="btn_ex3">^3</button>
+                        <button class="function-button" id="btn_sqrt">SQRT</button>
+                        <button class="function-button" id="btn_fact">!</button>
+                    </div>
+                    <hr />
+                    <div class="button-row">
+                        <button class="number-button" id="btn_1">1</button>
+                        <button class="number-button" id="btn_2">2</button>
+                        <button class="number-button" id="btn_3">3</button>
+                        <button class="calc-button" id="btn_div">/</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="number-button" id="btn_4">4</button>
+                        <button class="number-button" id="btn_5">5</button>
+                        <button class="number-button" id="btn_6">6</button>
+                        <button class="calc-button" id="btn_mul">*</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="number-button" id="btn_7">7</button>
+                        <button class="number-button" id="btn_8">8</button>
+                        <button class="number-button" id="btn_9">9</button>
+                        <button class="calc-button" id="btn_sub">-</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="number-button" id="btn_0">0</button>
+                        <button class="symbol-button" id="btn_dot">.</button>
+                        <button class="ans-button" id="btn_eq">=</button>
+                        <button class="calc-button" id="btn_plus">+</button>
+                    </div>
+                    <hr />
+                    <div class="button-row">
+                        <button class="convert-button" id="btn_cm-in">CM -> IN</button>
+                        <button class="convert-button" id="btn_in-cm">IN -> CM</button>
+                        <button class="convert-button" id="btn_km-mi">KM -> MI</button>
+                        <button class="convert-button" id="btn_mi-km">MI -> KM</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="convert-button" id="btn_c-f">C -> F</button>
+                        <button class="convert-button" id="btn_f-c">F -> C</button>
+                        <button class="convert-button" id="btn_c-k">C -> K</button>
+                        <button class="convert-button" id="btn_k-c">K -> C</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="convert-button" id="btn_dec-bin">DEC -> BIN</button>
+                        <button class="convert-button" id="btn_dec-oct">DEC -> OCT</button>
+                        <button class="convert-button" id="btn_dec-hex">DEC -> HEX</button>
+                        <button class="convert-button" id="btn_bin-dec">BIN -> DEC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js" type="module"></script>
+    </body>
+</html>
