@@ -17,6 +17,8 @@
                 <div class="display-group">
                     <div class="buffer-container">
                         <div class="operator-buffer">None</div>
+                        <div class="value-unit"></div>
+                        <div class="value-memory">M</div>
                         <div class="value-buffer">0</div>
                     </div>
                     <div class="display">0</div>
@@ -33,6 +35,13 @@
                         <button class="function-button" id="btn_ex3">^3</button>
                         <button class="function-button" id="btn_sqrt">SQRT</button>
                         <button class="function-button" id="btn_fact">!</button>
+                    </div>
+                    <hr />
+                    <div class="button-row">
+                        <button class="const-button" id="btn_const-pi">π</button>
+                        <button class="const-button" id="btn_const-c">C</button>
+                        <button class="const-button" id="btn_const-g">G</button>
+                        <button class="const-button" id="btn_const-h">h</button>
                     </div>
                     <hr />
                     <div class="button-row">
@@ -61,22 +70,34 @@
                     </div>
                     <hr />
                     <div class="button-row">
-                        <button class="convert-button" id="btn_cm-in">CM -> IN</button>
-                        <button class="convert-button" id="btn_in-cm">IN -> CM</button>
-                        <button class="convert-button" id="btn_km-mi">KM -> MI</button>
-                        <button class="convert-button" id="btn_mi-km">MI -> KM</button>
+                        <button class="convert-button" id="btn_dec-bin">DEC ⏵ BIN</button>
+                        <button class="convert-button" id="btn_dec-oct">DEC ⏵ OCT</button>
+                        <button class="convert-button" id="btn_dec-hex">DEC ⏵ HEX</button>
+                        <button class="convert-button" id="btn_bin-dec">BIN ⏵ DEC</button>
                     </div>
                     <div class="button-row">
-                        <button class="convert-button" id="btn_c-f">C -> F</button>
-                        <button class="convert-button" id="btn_f-c">F -> C</button>
-                        <button class="convert-button" id="btn_c-k">C -> K</button>
-                        <button class="convert-button" id="btn_k-c">K -> C</button>
+                        <button class="convert-button" id="btn_c-f">C ⏵ F</button>
+                        <button class="convert-button" id="btn_f-c">F ⏵ C</button>
+                        <button class="convert-button" id="btn_c-k">C ⏵ K</button>
+                        <button class="convert-button" id="btn_k-c">K ⏵ C</button>
                     </div>
                     <div class="button-row">
-                        <button class="convert-button" id="btn_dec-bin">DEC -> BIN</button>
-                        <button class="convert-button" id="btn_dec-oct">DEC -> OCT</button>
-                        <button class="convert-button" id="btn_dec-hex">DEC -> HEX</button>
-                        <button class="convert-button" id="btn_bin-dec">BIN -> DEC</button>
+                        <button class="convert-button" id="btn_cm-m">Cm ⏵ m</button>
+                        <button class="convert-button" id="btn_m-km">m ⏵ Km</button>
+                        <button class="convert-button" id="btn_km-au">Km ⏵ AU</button>
+                        <button class="convert-button" id="btn_au-ly">AU ⏵ LY</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="convert-button" id="btn_ly-au">LY ⏵ AU</button>
+                        <button class="convert-button" id="btn_au-km">AU ⏵ Km</button>
+                        <button class="convert-button" id="btn_km-m">Km ⏵ m</button>
+                        <button class="convert-button" id="btn_m-cm">m ⏵ Cm</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="convert-button" id="btn_cm-in">Cm ⏵ In</button>
+                        <button class="convert-button" id="btn_in-cm">In ⏵ Cm</button>
+                        <button class="convert-button" id="btn_km-mi">Km ⏵ Mi</button>
+                        <button class="convert-button" id="btn_mi-km">Mi ⏵ Km</button>
                     </div>
                 </div>
             </div>

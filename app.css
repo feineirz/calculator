@@ -16,7 +16,7 @@ body {
 
 .app-container {
     margin: 1rem;
-    width: 500px;
+    width: 485px;
     height: auto;
     background-color: #aaa;
     border: solid 1px #555;
@@ -60,13 +60,23 @@ body {
     color: #555;
 }
 
+.value-unit {
+    margin-left: 0.5rem;
+}
+
+.value-memory {
+    margin-left: 0.5rem;
+    display: none;
+}
+
 .display {
     padding: 0.3rem;
     width: auto;
-    font-size: 36px;
+    font-size: 35px;
     text-align: right;
     /* background-color: #eee; */
     border-radius: 5px;
+    overflow-x: hidden;
 }
 
 .status-bar {
@@ -109,6 +119,16 @@ body {
 }
 .function-button:hover {
     background-color: #a10c2c;
+}
+
+.const-button {
+    height: 30px !important;
+    font-size: 18px !important;
+    color: #eee;
+    background-color: #be0abe;
+}
+.const-button:hover {
+    background-color: #8b098b;
 }
 
 .convert-button {
