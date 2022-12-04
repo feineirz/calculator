@@ -9,10 +9,10 @@ const btnC = document.querySelector('#btn_c')
 const btnM = document.querySelector('#btn_m')
 const btnMr = document.querySelector('#btn_mr')
 
-const btnConstPi = document.querySelector('#btn_const-pi')
-const btnConstC = document.querySelector('#btn_const-c')
-const btnConstG = document.querySelector('#btn_const-g')
-const btnConstH = document.querySelector('#btn_const-h')
+const btnConst_Pi = document.querySelector('#btn_const-pi')
+const btnConst_C = document.querySelector('#btn_const-c')
+const btnConst_g = document.querySelector('#btn_const-g')
+const btnConst_h = document.querySelector('#btn_const-h')
 
 const btnEx2 = document.querySelector('#btn_ex2')
 const btnEx3 = document.querySelector('#btn_ex3')
@@ -57,7 +57,10 @@ let memoryBuffer = 0
 const numberButtonClickHandler = e => {
     if (display.innerText === '0' || oprBuffer.innerText === 'ANS') {
         display.innerText = e.target.innerText
-        oprBuffer.innerText = oprBuffer.innerText === 'ANS' ? 'None' : oprBuffer.innerText
+        if (oprBuffer.innerText === 'ANS') {
+            oprBuffer.innerText = 'None'
+            valueUnit.innerText = ''
+        }
     } else {
         display.innerText = display.innerText + e.target.innerText
     }
@@ -90,9 +93,9 @@ const calculate = () => {
         display.innerText = bufferValue - displayValue
     } else if (opr === '*') {
         if (valueUnit.innerText === 'm/s') valueUnit.innerText = 'm'
-        if (valueUnit.innerText === 'm^2Kg/s') valueUnit.innerText = 'm^2Kg'
         display.innerText = bufferValue * displayValue
     } else if (opr === '/') {
+        valueUnit.innerText = ''
         display.innerText = bufferValue / displayValue
     }
 
@@ -143,21 +146,21 @@ btnEx2.addEventListener('click', e => {
     const val = display.innerText - 0
     display.innerText = val * val
     trimDisplay()
-    // oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = ''
 })
 
 btnEx3.addEventListener('click', e => {
     const val = display.innerText - 0
     display.innerText = val * val * val
     trimDisplay()
-    // oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = ''
 })
 
 btnSqrt.addEventListener('click', e => {
     const val = display.innerText - 0
     display.innerText = Math.sqrt(val)
     trimDisplay()
-    // oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = ''
 })
 
 const factorial = v => {
@@ -169,28 +172,28 @@ btnFact.addEventListener('click', e => {
     const val = display.innerText - 0
     display.innerText = factorial(val)
     trimDisplay()
-    // oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = ''
 })
 
 // Constant
-btnConstPi.addEventListener('click', () => {
+btnConst_Pi.addEventListener('click', () => {
     display.innerText = '3.14159265358979324'
     valueUnit.innerText = ''
 })
 
-btnConstC.addEventListener('click', () => {
+btnConst_C.addEventListener('click', () => {
     display.innerText = '299792458'
     valueUnit.innerText = 'm/s'
 })
 
-btnConstG.addEventListener('click', () => {
+btnConst_g.addEventListener('click', () => {
     display.innerText = '9.82'
     valueUnit.innerText = 'm/s^2'
 })
 
-btnConstH.addEventListener('click', () => {
+btnConst_h.addEventListener('click', () => {
     display.innerText = '6.62607015E-34'
-    valueUnit.innerText = 'm^2Kg/s'
+    valueUnit.innerText = 'Js'
 })
 
 // Etc
@@ -218,24 +221,28 @@ const formulaKC = k => k - 273.15
 btnDecToBin.addEventListener('click', () => {
     display.innerText = (display.innerText - 0).toString(2)
     oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = 'BIN'
     trimDisplay()
 })
 
 btnDecToOct.addEventListener('click', () => {
     display.innerText = (display.innerText - 0).toString(8)
     oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = 'OCT'
     trimDisplay()
 })
 
 btnDecToHex.addEventListener('click', () => {
     display.innerText = (display.innerText - 0).toString(16).toUpperCase()
     oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = 'HEX'
     trimDisplay()
 })
 
 btnBinToDec.addEventListener('click', () => {
     display.innerText = parseInt(display.innerText, 2)
     oprBuffer.innerText = 'ANS'
+    valueUnit.innerText = ''
     trimDisplay()
 })
 
